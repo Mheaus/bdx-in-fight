@@ -1,12 +1,13 @@
 {
-  "name": "gatsby-contentful-starter",
-  "description": "Starter Contentful Gatsby Blog",
+  "name": "bordeaux-in-fight",
+  "description": "Official Bordeaux en luttes website",
   "version": "1.0.0",
-  "author": "Stefan Judis <stefanjudis@gmail.com>",
+  "author": "Mathieu Audebert <mathieu.adbrt@gmail.com>",
   "bugs": {
     "url": "https://github.com/contentful-userland/gatsby-contentful-starter/issues"
   },
   "dependencies": {
+    "gatsby-cli": "^2.8.28",
     "gatsby-image": "^2.0.38",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sharp": "^2.0.34",

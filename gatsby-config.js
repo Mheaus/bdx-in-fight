@@ -18,7 +18,7 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Contentful starter',
+    title: 'Bordeaux en luttes',
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
