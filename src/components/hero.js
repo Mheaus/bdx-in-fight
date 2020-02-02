@@ -9,7 +9,6 @@ export default ({ data }) => (
       className={styles.heroImage}
       alt={data.name}
       fluid={data.heroImage.fluid}
-      backgroundColor="#fff"
     />
   </div>
 )
