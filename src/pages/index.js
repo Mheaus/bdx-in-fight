@@ -2,9 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import Hero from '../components/hero'
+import { ArticlePreview, HeroBanner } from '../components'
 import Layout from '../components/layout'
-import ArticlePreview from '../components/ArticlePreview'
 
 class RootIndex extends React.Component {
   render() {
@@ -16,7 +15,7 @@ class RootIndex extends React.Component {
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
-          <Hero data={indexPage} />
+          <HeroBanner data={indexPage} />
           <div className="wrapper">
             <h2 className="section-headline">Recent articles</h2>
             <ul className="article-list">
@@ -49,7 +48,7 @@ export const pageQuery = graphql`
         node {
           title
           slug
-          publishDate(formatString: "MMMM Do, YYYY")
+          publishDate(locale: "fr", formatString: "Do MMMM YYYY")
           heroImage {
             fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
               ...GatsbyContentfulFluid_tracedSVG
@@ -67,12 +66,7 @@ export const pageQuery = graphql`
       nodes {
         title
         heroImage: banner {
-          fluid(
-            maxWidth: 1180
-            maxHeight: 480
-            resizingBehavior: PAD
-            background: "rgb:000000"
-          ) {
+          fluid(resizingBehavior: PAD, background: "rgb:000000") {
             ...GatsbyContentfulFluid_tracedSVG
           }
         }
