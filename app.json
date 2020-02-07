@@ -1,8 +1,8 @@
 {
   "name": "Bordeaux en luttes",
   "description": "Site officiel de bordeaux de luttes 2020",
-  "keywords": ["contentful", "gatsby", "static", "ssg"],
-  "repository": "https://github.com/Mheaus/bdx-in-fight",
+  "keywords": ["contentful", "gatsby", "static", "ssg", "bordeaux", "poutou"],
+  "repository": "https://github.com/mheaus/bdx-in-fight",
   "success_url": "/",
   "buildpacks": [
     {

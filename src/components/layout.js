@@ -1,11 +1,13 @@
-import { Link } from 'gatsby'
-import Helmet from 'react-helmet'
+// import { Link } from 'gatsby'
+// import Helmet from 'react-helmet'
 import React from 'react'
 
-import base from './base.css'
 import Container from './container'
 import Navigation from './navigation'
 import GoogleAnalytics from './GoogleAnalytics'
+import MetaTags from './MetaTags'
+
+import './base.css'
 
 const Template = props => {
   const { location, children } = props
@@ -19,6 +21,7 @@ const Template = props => {
   return (
     <>
       <GoogleAnalytics />
+      <MetaTags />
       <Container>
         <Navigation />
         {children}

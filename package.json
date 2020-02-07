@@ -4,46 +4,48 @@
   "version": "1.0.0",
   "author": "Mathieu Audebert <mathieu.adbrt@gmail.com>",
   "bugs": {
-    "url": "https://github.com/contentful-userland/gatsby-contentful-starter/issues"
+    "url": "https://github.com/mheaus/bdx-in-fight/issues"
   },
   "dependencies": {
-    "gatsby-cli": "^2.8.28",
-    "gatsby-image": "^2.0.38",
-    "gatsby-plugin-react-helmet": "^3.0.12",
-    "gatsby-plugin-sharp": "^2.0.34",
-    "gatsby-source-contentful": "^2.0.48",
-    "gatsby-transformer-remark": "^2.3.8",
-    "gatsby-transformer-sharp": "^2.1.18",
+    "gatsby-cli": "^2.8.29",
+    "gatsby-image": "^2.2.40",
+    "gatsby-plugin-react-helmet": "^3.1.22",
+    "gatsby-plugin-sharp": "^2.4.5",
+    "gatsby-source-contentful": "^2.1.85",
+    "gatsby-transformer-remark": "^2.6.50",
+    "gatsby-transformer-sharp": "^2.3.14",
     "lodash": "^4.17.11",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-helmet": "^5.2.0",
-    "sharp": "^0.22.0"
+    "sharp": "^0.22.0",
+    "styled-components": "^5.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "chalk": "^2.4.2",
-    "contentful-import": "^7.4.3",
+    "contentful-import": "^7.7.0",
     "dotenv": "^8.0.0",
-    "eslint": "^5.16.0",
-    "eslint-plugin-react": "^7.12.4",
-    "gatsby": "^2.3.22",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.18.3",
+    "gatsby": "^2.19.12",
     "gh-pages": "^2.0.1",
     "inquirer": "^6.2.2",
     "prettier": "^1.17.0",
     "rimraf": "^2.6.3",
     "yargs-parser": "^13.0.0"
   },
-  "homepage": "https://github.com/contentful-userland/gatsby-contentful-starter#readme",
+  "homepage": "https://bordeaux-en-luttes.fr/",
   "keywords": [
     "gatsby",
-    "contentful"
+    "contentful",
+    "bordeaux"
   ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/contentful-userland/gatsby-contentful-starter.git"
+    "url": "git+https://github.com/mheaus/bdx-in-fight.git"
   },
   "scripts": {
     "dev": "npm run develop",
