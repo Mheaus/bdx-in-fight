@@ -3,8 +3,7 @@ import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
 
-import Layout from '../components/layout'
-import { HeroBanner } from '../components'
+import { HeroBanner, Layout } from '../components'
 
 class BlogPostTemplate extends React.Component {
   render() {
