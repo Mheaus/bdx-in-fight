@@ -19,9 +19,12 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.0",
     "sharp": "^0.22.0",
-    "styled-components": "^5.0.1"
+    "styled-components": "^5.0.1",
+    "typeface-lato": "0.0.75"
   },
   "devDependencies": {
+    "@types/react": "^16.9.19",
+    "@types/styled-components": "^4.4.2",
     "babel-eslint": "^10.0.1",
     "chalk": "^2.4.2",
     "contentful-import": "^7.7.0",
