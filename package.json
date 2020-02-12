@@ -7,6 +7,10 @@
     "url": "https://github.com/mheaus/bdx-in-fight/issues"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-brands-svg-icons": "^5.12.1",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.8",
     "gatsby-cli": "^2.8.29",
     "gatsby-image": "^2.2.40",
     "gatsby-plugin-react-helmet": "^3.1.22",
@@ -26,6 +30,8 @@
   "devDependencies": {
     "@types/react": "^16.9.19",
     "@types/styled-components": "^4.4.2",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
+    "@typescript-eslint/parser": "^2.19.0",
     "babel-eslint": "^10.0.1",
     "chalk": "^2.4.2",
     "contentful-import": "^7.7.0",
@@ -35,7 +41,7 @@
     "gatsby": "^2.19.12",
     "gh-pages": "^2.0.1",
     "inquirer": "^6.2.2",
-    "prettier": "^1.17.0",
+    "prettier": "^1.19.1",
     "rimraf": "^2.6.3",
     "yargs-parser": "^13.0.0"
   },
