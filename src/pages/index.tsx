@@ -4,7 +4,7 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
-import { ArticlePreview, HeroBanner, Layout, Paper } from '../components'
+import { ArticlePreview, HeroBanner, Layout, Paper, PromoVideo } from '../components'
 
 const ArticleList = styled.ul`
   display: grid;
@@ -26,31 +26,6 @@ const ArticleList = styled.ul`
   }
 `
 
-const VideoContainer = styled(Paper)`
-  display: flex;
-  justify-content: space-between;
-  margin: 2rem 2rem -4rem;
-  transform: translateY(-4rem);
-`
-
-const VideoPromoContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  font-size: 1.25rem;
-  justify-content: space-between;
-  padding: 2rem 4rem 2rem 0;
-
-  a {
-    display: block;
-    margin-top: 1rem;
-  }
-`
-
-const Video = styled.video`
-  border-radius: 0.5rem;
-  width: 62.5%;
-`
-
 const ArticlesSection = styled.div`
   margin: 2rem 2rem 1rem;
 `
@@ -63,8 +38,6 @@ class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const [indexPage] = get(this, 'props.data.allContentfulPage.nodes')
-    const heroVideoUrl = get(this, 'props.data.heroVideo.file.url')
-    const heroVideoPosterUrl = get(this, 'props.data.heroVideoPoster.file.url')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
 
     return (
@@ -72,21 +45,7 @@ class RootIndex extends React.Component {
         <>
           <Helmet title={siteTitle} />
           <HeroBanner data={indexPage} />
-          <VideoContainer>
-            <VideoPromoContainer>
-              <p>
-                Les 15 et 22 mars prochain, je vote Bordeaux en Luttes, la liste
-                des luttes.
-              </p>
-              <div>
-                {/* <Link>consulter le programme</Link> */}
-                {/* <Link>voir la liste des candidats</Link> */}
-              </div>
-            </VideoPromoContainer>
-            <Video controls poster={heroVideoPosterUrl} src={heroVideoUrl}>
-              sorry your browser doesn't support embedded videos.
-            </Video>
-          </VideoContainer>
+          <PromoVideo />
           <ArticlesSection>
             <SectionHeadline>Articles</SectionHeadline>
             <ArticleList>
@@ -122,20 +81,6 @@ export const pageQuery = graphql`
             ...GatsbyContentfulFluid_tracedSVG
           }
         }
-      }
-    }
-    heroVideo: contentfulAsset(
-      contentful_id: { eq: "2QCfv4eaHJUCG5O8XyxYfc" }
-    ) {
-      file {
-        url
-      }
-    }
-    heroVideoPoster: contentfulAsset(
-      contentful_id: { eq: "SU5QDcAMhrY2AW2b4SfEg" }
-    ) {
-      file {
-        url
       }
     }
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {

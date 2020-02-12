@@ -29,9 +29,11 @@ const HeroLogoContainer = styled.div`
 `
 
 const HeroLogo = styled.img`
-  height: 11.75rem;
-  padding-bottom: 8rem;
-  width: 20.875rem;
+	height: 12rem;
+	padding-bottom: 2rem;
+	object-fit: contain;
+	width: 21rem;
+	max-width: calc(100% - 8rem);
 `
 
 const HeroBanner = ({ data }) => (
