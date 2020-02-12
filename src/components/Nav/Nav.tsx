@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
 
 const NavContainer = styled.ul`
   background: #fff;
@@ -38,6 +38,16 @@ const NavigationItem = styled.li`
   }
 `
 
+const LinkIcon = styled.a`
+  color: #bcbcbc;
+  margin-left: 1.5rem;
+  transition: all 0.25s;
+
+  &:hover {
+    opacity: 0.75;
+  }
+`
+
 const Nav = () => (
   <nav role="navigation">
     <NavContainer>
@@ -48,9 +58,12 @@ const Nav = () => (
         </NavigationItem>
       </div>
       <div>
-        <a href="https://www.facebook.com/BordeauxEnLuttes" target="_blank" noopener>
+        <LinkIcon href="https://www.facebook.com/BordeauxEnLuttes" target="_blank">
           <FontAwesomeIcon color="#bcbcbc" icon={faFacebookSquare} size="2x" />
-        </a>
+        </LinkIcon>
+        <LinkIcon href="https://twitter.com/EnLuttes" target="_blank">
+          <FontAwesomeIcon color="#bcbcbc" icon={faTwitterSquare} size="2x" />
+        </LinkIcon>
       </div>
     </NavContainer>
   </nav>
