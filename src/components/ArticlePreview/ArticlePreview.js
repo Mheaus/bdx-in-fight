@@ -3,7 +3,9 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 
-const ArticlePreviewContainer = styled.div``
+const ArticlePreviewContainer = styled.div`
+  display: block;
+`
 
 const Title = styled.h3`
   font-size: 1.25em;
