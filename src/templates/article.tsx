@@ -22,9 +22,9 @@ const Footer = styled.div`
   margin: 2rem;
 `
 
-class BlogPostTemplate extends React.Component {
+class ArticleTemplate extends React.Component {
   render() {
-    const post = get(this.props, 'data.contentfulBlogPost')
+    const post = get(this.props, 'data.contentfulArticle')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
     return (
@@ -52,16 +52,16 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
-export default BlogPostTemplate
+export default ArticleTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query ArticleBySlug($slug: String!) {
     site {
       siteMetadata {
         title
       }
     }
-    contentfulBlogPost(slug: { eq: $slug }) {
+    contentfulArticle(slug: { eq: $slug }) {
       title
       publishDate(formatString: "Do MMMM YYYY", locale: "fr")
       heroImage {
