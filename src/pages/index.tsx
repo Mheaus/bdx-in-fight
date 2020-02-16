@@ -1,8 +1,9 @@
 import * as React from 'react'
-import { Link, graphql } from 'gatsby'
-import get from 'lodash/get'
+import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
+import get from 'lodash/get'
 import styled from 'styled-components'
+import uniqBy from 'lodash/uniqBy'
 
 import { ArticlePreview, HeroBanner, Layout, Paper, PromoVideo } from '../components'
 
@@ -34,34 +35,35 @@ const SectionHeadline = styled.h2`
   font-size: 1.375rem;
 `
 
-class RootIndex extends React.Component {
-  render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const [indexPage] = get(this, 'props.data.allContentfulPage.nodes')
-    const posts = get(this, 'props.data.allContentfulArticle.edges')
+const RootIndex: React.FC = (props) => {
+  const siteTitle = get(props, 'data.site.siteMetadata.title')
+  const [indexPage] = get(props, 'data.allContentfulPage.nodes')
+  const articles = uniqBy(
+    get(props, 'data.allContentfulArticle.edges', []),
+    'contentful_id' as unknown as Function // string is a valig shorthand argument for uniqBy
+  )
 
-    return (
-      <Layout location={this.props.location}>
-        <>
-          <Helmet title={siteTitle} />
-          <HeroBanner data={indexPage} />
-          <PromoVideo />
-          <ArticlesSection>
-            <SectionHeadline>Articles</SectionHeadline>
-            <ArticleList>
-              {posts.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
-                  </li>
-                )
-              })}
-            </ArticleList>
-          </ArticlesSection>
-        </>
-      </Layout>
-    )
-  }
+  return (
+    <Layout location={props.location}>
+      <>
+        <Helmet title={siteTitle} />
+        <HeroBanner data={indexPage} />
+        <PromoVideo />
+        <ArticlesSection>
+          <SectionHeadline>Articles</SectionHeadline>
+          <ArticleList>
+            {articles.map(({ node }) => {
+              return (
+                <li key={node.slug}>
+                  <ArticlePreview article={node} />
+                </li>
+              )
+            })}
+          </ArticleList>
+        </ArticlesSection>
+      </>
+    </Layout>
+  )
 }
 
 export default RootIndex
