@@ -1,25 +1,25 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import Img from 'gatsby-image'
-import styled from 'styled-components'
+import React from 'react';
+import { Link } from 'gatsby';
+import Img from 'gatsby-image';
+import styled from 'styled-components';
 
 const ArticlePreviewContainer = styled.div`
   display: block;
-`
+`;
 
 const Title = styled.h3`
   font-size: 1.25em;
   line-height: 1.625rem;
   margin: 0.25rem 0 0.5rem;
-`
+`;
 
 const PublishDate = styled.small`
   color: #a0a0a0;
-`
+`;
 
 const Description = styled.p`
   line-height: 1.375rem;
-`
+`;
 
 const Tag = styled.p`
   color: #a0a0a0;
@@ -30,7 +30,7 @@ const Tag = styled.p`
   border-radius: 2px;
   border: 1px solid #a0a0a0;
   margin-right: 0.5em;
-`
+`;
 
 export default ({ article }) => (
   <ArticlePreviewContainer>
@@ -51,4 +51,4 @@ export default ({ article }) => (
         </p>
       ))} */}
   </ArticlePreviewContainer>
-)
+);

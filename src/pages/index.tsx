@@ -41,10 +41,7 @@ const SectionHeadline = styled.h2`
 
 const RootIndex: React.FC = props => {
   const indexPage = get(props, 'data.contentfulPage');
-  const articles = uniqBy(
-    get(props, 'data.allContentfulArticle.edges', []),
-    ('contentful_id' as unknown) as Function // string is a valig shorthand argument for uniqBy
-  );
+  const articles = uniqBy(get(props, 'data.allContentfulArticle.edges', []), ({ node }) => node.contentful_id);
 
   return (
     <Layout>
@@ -81,6 +78,7 @@ export const pageQuery = graphql`
     allContentfulArticle(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {
+          contentful_id
           title
           slug
           publishDate(locale: "fr", formatString: "Do MMMM YYYY")
