@@ -1,13 +1,19 @@
-import { DefaultTheme } from 'styled-components'
+import { DefaultTheme } from 'styled-components';
 
-import breakpoints from './breakpoints'
-import colors from './colors'
-import shadows from './shadows'
+import breakpoints from './breakpoints';
+import colors from './colors';
+import shadows from './shadows';
 
-const theme: DefaultTheme = {
-  breakpoints,
-  colors,
-  shadows
+interface Theme extends DefaultTheme {
+  breakpoints: typeof breakpoints;
+  colors: typeof colors;
+  shadows: typeof shadows;
 }
 
-export default theme
+const theme: Theme = {
+  breakpoints,
+  colors,
+  shadows,
+};
+
+export default theme;
