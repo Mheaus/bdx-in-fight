@@ -1,4 +1,3 @@
-// import original module declarations
 import { DefaultTheme } from 'styled-components'
 
 import breakpoints from './breakpoints'

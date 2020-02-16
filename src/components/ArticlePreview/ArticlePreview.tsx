@@ -34,10 +34,10 @@ const Tag = styled.p`
 
 export default ({ article }) => (
   <ArticlePreviewContainer>
-    <Img alt="blog-post-preview" fluid={article.heroImage.fluid} />
+    <Img alt="article-preview" fluid={article.heroImage.fluid} />
     <PublishDate>{article.publishDate}</PublishDate>
     <Title>
-      <Link to={`/blog/${article.slug}`}>{article.title}</Link>
+      <Link to={`/article/${article.slug}`}>{article.title}</Link>
     </Title>
     <Description
       dangerouslySetInnerHTML={{
