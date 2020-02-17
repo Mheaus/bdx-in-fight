@@ -8,10 +8,10 @@ import { ArticlePreview, HeroBanner, Layout, PromoVideo } from '../components';
 
 const ArticleList = styled.ul`
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 3rem;
   grid-template-columns: repeat(3, 1fr);
   list-style: none;
-  margin: 0;
+  margin: 0 0 8rem;
   padding: 0;
 
   ${({ theme }) => {

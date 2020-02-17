@@ -28,7 +28,7 @@ const Logo = styled.img`
 const NavigationItem = styled.li`
   align-items: center;
   display: inline-flex;
-  margin: 0 1rem;
+  margin-left: 1rem;
 
   a {
     color: currentColor;
@@ -65,6 +65,9 @@ const Nav = () => {
           <Logo src="/logo-red.png" />
           <NavigationItem>
             <Link to="/">Accueil</Link>
+          </NavigationItem>
+          <NavigationItem>
+            <Link to="/candidats">Candidats</Link>
           </NavigationItem>
         </div>
         {!media.isMobile && (
