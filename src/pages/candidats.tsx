@@ -64,7 +64,7 @@ const pageQuery = graphql`
     contentfulPage(name: { eq: "candidats" }) {
       title
     }
-    allContentfulCandidat {
+    allContentfulCandidat(sort: { fields: createdAt, order: ASC }) {
       nodes {
         age
         contentful_id
