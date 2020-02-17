@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'gatsby';
+import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare, faInstagramSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 import styled from 'styled-components';
 
@@ -70,9 +71,12 @@ const Nav = () => {
             <Link to="/candidats">Candidats</Link>
           </NavigationItem>
         </div>
-        {!media.isMobile && (
+        {!media.isSmall && (
           <FlexContainer>
             <span>Contactez-nous :</span>
+            <LinkIcon href="mailto://bordeauxenluttes@gmail.com" target="_blank">
+              <FontAwesomeIcon color="#bcbcbc" icon={faEnvelopeSquare} size="2x" />
+            </LinkIcon>
             <LinkIcon href="https://www.facebook.com/BordeauxEnLuttes" target="_blank">
               <FontAwesomeIcon color="#bcbcbc" icon={faFacebookSquare} size="2x" />
             </LinkIcon>
