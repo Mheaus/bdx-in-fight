@@ -61,10 +61,7 @@ function usePortal(options: UsePortalOptions = {}): any {
     if (!portal.current) portal.current = document.createElement('div');
   }, [portal]);
 
-  const elToMountTo = React.useMemo(() => {
-    debugger;
-    return (bindTo && findDOMNode(bindTo)) || document.body;
-  }, [bindTo]);
+  const elToMountTo = React.useMemo(() => bindTo || document.body, [bindTo]);
 
   const createCustomEvent = (e: any) => {
     if (!e) return { portal, targetEl, event: e };
@@ -103,6 +100,7 @@ function usePortal(options: UsePortalOptions = {}): any {
         throw Error(errorMessage1);
       }
       if (onOpen) onOpen(customEvent);
+
       setOpen(true);
     },
     [portal, setOpen, targetEl, onOpen]
