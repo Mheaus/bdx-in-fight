@@ -1,5 +1,4 @@
 import 'typeface-lato';
-import './global.css';
 
 import * as React from 'react';
 import { Helmet } from 'react-helmet';

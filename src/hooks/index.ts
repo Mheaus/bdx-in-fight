@@ -1,3 +1,4 @@
-import useMedia from './useMedia'
+import useMedia from './useMedia';
+import usePortal from './usePortal';
 
-export { useMedia }
+export { useMedia, usePortal };

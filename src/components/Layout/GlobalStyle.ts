@@ -1,8 +1,18 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   :root {
     font-size: 16px;
+
+    ${({ theme }) => `
+      @media screen and (max-width: ${theme.breakpoints.small}) {
+        font-size: 12px;
+      }
+    `}
+  }
+
+  *, *::after, *::before {
+    box-sizing: border-box;
   }
 
   body {
@@ -34,6 +44,6 @@ const GlobalStyle = createGlobalStyle`
       text-decoration: underline;
     }
   }
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;
