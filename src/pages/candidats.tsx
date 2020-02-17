@@ -103,7 +103,7 @@ const Candidats: React.FC = () => {
                 <small>
                   {age} ans, {title}
                 </small>
-                <p
+                <div
                   dangerouslySetInnerHTML={{
                     __html: shortBio.childMarkdownRemark.html,
                   }}

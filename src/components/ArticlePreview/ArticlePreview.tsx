@@ -17,20 +17,20 @@ const PublishDate = styled.small`
   color: #a0a0a0;
 `;
 
-const Description = styled.p`
+const Description = styled.div`
   line-height: 1.375rem;
 `;
 
-const Tag = styled.p`
-  color: #a0a0a0;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.33333rem 0.5rem;
-  line-height: 1;
-  border-radius: 2px;
-  border: 1px solid #a0a0a0;
-  margin-right: 0.5em;
-`;
+// const Tag = styled.p`
+//   color: #a0a0a0;
+//   text-decoration: none;
+//   display: inline-block;
+//   padding: 0.33333rem 0.5rem;
+//   line-height: 1;
+//   border-radius: 2px;
+//   border: 1px solid #a0a0a0;
+//   margin-right: 0.5em;
+// `;
 
 export default ({ article }) => (
   <ArticlePreviewContainer>
