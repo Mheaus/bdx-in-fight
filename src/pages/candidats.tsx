@@ -71,7 +71,7 @@ const pageQuery = graphql`
         id
         image {
           fluid {
-            ...GatsbyContentfulFluid_tracedSVG
+            ...GatsbyContentfulFluid
           }
         }
         name
