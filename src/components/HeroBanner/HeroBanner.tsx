@@ -1,7 +1,7 @@
-import React from 'react'
-import Img from 'gatsby-image'
+import * as React from 'react';
+import Img from 'gatsby-image';
 
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const HeroBannerContainer = styled.div`
   background: #fff;
@@ -10,12 +10,12 @@ const HeroBannerContainer = styled.div`
   max-height: calc(100vh - 4rem);
   overflow: hidden;
   position: relative;
-`
+`;
 
 const HeroImage = styled(Img)`
   height: 100%;
   width: 100%;
-`
+`;
 
 const HeroLogoContainer = styled.div`
   align-items: center;
@@ -26,27 +26,23 @@ const HeroLogoContainer = styled.div`
   position: absolute;
   top: 0;
   width: 100%;
-`
+`;
 
 const HeroLogo = styled.img`
-	height: 12rem;
-	padding-bottom: 2rem;
-	object-fit: contain;
-	width: 21rem;
-	max-width: calc(100% - 8rem);
-`
+  height: 12rem;
+  padding-bottom: 2rem;
+  object-fit: contain;
+  width: 21rem;
+  max-width: calc(100% - 8rem);
+`;
 
 const HeroBanner = ({ data }) => (
   <HeroBannerContainer>
-    <HeroImage
-      alt={data.name}
-      fadeIn
-      fluid={data.heroImage.fluid}
-    />
+    <HeroImage alt={data.name} fadeIn fluid={data.heroImage.fluid} />
     <HeroLogoContainer>
       <HeroLogo src="/logo-red.png" alt="Bordeaux en luttes - logo red" />
     </HeroLogoContainer>
   </HeroBannerContainer>
-)
+);
 
-export { HeroBanner }
+export { HeroBanner };

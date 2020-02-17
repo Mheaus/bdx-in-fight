@@ -30,6 +30,7 @@ module.exports = {
         extensions: ['.jsx', '.tsx'],
       },
     ],
+    'react/no-danger': 0,
     'react/prop-types': 0,
   },
 };
