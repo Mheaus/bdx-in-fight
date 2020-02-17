@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createPortal, findDOMNode } from 'react-dom';
+import { createPortal } from 'react-dom';
 
 type HTMLElRef = React.MutableRefObject<HTMLElement>;
 type CustomEvent = {
@@ -58,7 +58,7 @@ function usePortal(options: UsePortalOptions = {}): any {
   const portal = React.useRef(document.createElement('div')) as HTMLElRef;
 
   React.useEffect(() => {
-    if (!portal.current) portal.current = document.createElement('div');
+    if (!portal.current) portal.current = document && document.createElement('div');
   }, [portal]);
 
   const elToMountTo = React.useMemo(() => bindTo || document.body, [bindTo]);
@@ -221,4 +221,6 @@ function usePortal(options: UsePortalOptions = {}): any {
   });
 }
 
-export default usePortal;
+const checkDocument = () => (typeof document !== 'undefined' ? usePortal : () => ({}));
+
+export default checkDocument();
