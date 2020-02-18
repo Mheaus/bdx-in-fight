@@ -24,14 +24,20 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
+  button {
+    background: unset;
+    border: none;
+    box-shadow: unset;
+    cursor: pointer;
+  }
+
   img {
     display: block;
     width: 100%;
   }
 
   h1,
-  h2,
-  h3 {
+  h2 {
     font-size: 2em;
     font-weight: normal;
   }

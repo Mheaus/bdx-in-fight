@@ -1,3 +1,5 @@
+const random = require('lodash/random');
+
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
@@ -23,6 +25,12 @@ module.exports = {
   plugins: [
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: ['#26ac9e', '#5822f6', '#f05151', '#f9ea50'][random(0, 3)],
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
