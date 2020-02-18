@@ -117,7 +117,7 @@ const Nav = () => {
           <NavigationItem>
             <Link to="/candidats">Candidats</Link>
           </NavigationItem>
-          {/* {!isCurrentPageDonations && <LinkButton to="/dons">je fais un don</LinkButton>} */}
+          {!isCurrentPageDonations && <LinkButton to="/dons">je fais un don</LinkButton>}
         </div>
         {media.isSmall && (
           <TextButton onClick={openPortal} type="button">

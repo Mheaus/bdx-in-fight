@@ -19,13 +19,16 @@ const ListContainer = styled.div`
   column-gap: 1.5rem;
 
   ${({ theme }) => {
-    const { small, large } = theme.breakpoints;
+    const { medium, large, small } = theme.breakpoints;
 
     return `
       @media screen and (max-width: ${small}) {
         column-count: 1;
       }
-      @media screen and (min-width: ${small}) and (min-width: ${small}) {
+      @media screen and (min-width: ${small}) and (max-width: ${medium}) {
+        column-count: 2;
+      }
+      @media screen and (min-width: ${medium}) and (max-width: ${large}) {
         column-count: 3;
       }
       @media screen and (min-width: ${large}) {

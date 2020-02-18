@@ -4,7 +4,7 @@ import get from 'lodash/get';
 import styled from 'styled-components';
 import uniqBy from 'lodash/uniqBy';
 
-import { ArticlePreview, HeroBanner, Layout, PromoVideo } from '../components';
+import { ArticlePreview, CandidatsBanner, HeroBanner, Layout, PromoVideo } from '../components';
 
 const ArticleList = styled.ul`
   display: grid;
