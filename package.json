@@ -1,7 +1,7 @@
 {
   "name": "bordeaux-in-fight",
   "description": "Official Bordeaux en luttes website",
-  "version": "1.9.2",
+  "version": "1.10.0",
   "author": "Mathieu Audebert <mathieu.adbrt@gmail.com>",
   "bugs": {
     "url": "https://github.com/mheaus/bdx-in-fight/issues"
